@@ -10,3 +10,17 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+    properties:
+      globally_quoted_identifiers: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+    database: postgresql
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}}
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
