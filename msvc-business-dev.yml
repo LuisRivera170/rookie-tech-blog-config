@@ -2,6 +2,8 @@ business:
   property: Business Profile Dev
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/blog-business-db?useSSL=false&serverTimezone=UTC
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
